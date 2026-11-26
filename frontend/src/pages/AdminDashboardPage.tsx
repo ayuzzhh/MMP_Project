@@ -129,7 +129,7 @@ export const AdminDashboardPage: React.FC = () => {
   const tabs = [
     { id: 'OVERVIEW' as SectionTab, label: '1. Overview', icon: LayoutDashboard },
     { id: 'MAP' as SectionTab, label: '2. Village Map', icon: MapPin },
-    { id: 'LAND_ID' as SectionTab, label: '3. Land Identification', icon: Eye, highlight: true },
+    { id: 'LAND_ID' as SectionTab, label: '3. Land Identification', icon: Eye },
     { id: 'PROPERTIES' as SectionTab, label: '4. Property Details', icon: Building },
     { id: 'DOCUMENTS' as SectionTab, label: '5. Document Uploads', icon: Upload },
     { id: 'APPROVALS' as SectionTab, label: '6. Pending Approvals', icon: CheckCircle2, badge: pendingRequests.length },
@@ -203,9 +203,7 @@ export const AdminDashboardPage: React.FC = () => {
               className={`px-3 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
                 isSelected
                   ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
-                  : tab.highlight
-                  ? 'bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >
               <Icon className="w-4 h-4" />
